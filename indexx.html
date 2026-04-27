@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How much do I love you? 💖</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            padding-top: 150px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            margin: 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            position: relative;
+        }
+        .infinity {
+            background-color: #ff4da6;
+            color: white;
+        }
+        .zero {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>How much do you think Shahmeer loves you? 💖</h1>
+    <button class="infinity" onclick="alert('Infinity ❤️❤️❤️')">∞</button>
+    <button class="zero" id="zeroBtn">0%</button>
+
+    <script>
+        const zeroBtn = document.getElementById("zeroBtn");
+
+        zeroBtn.addEventListener("mouseover", () => {
+            // Move the button to a random position
+            const x = Math.random() * (window.innerWidth - zeroBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - zeroBtn.offsetHeight);
+            zeroBtn.style.position = "absolute";
+            zeroBtn.style.left = x + "px";
+            zeroBtn.style.top = y + "px";
+        });
+
+        zeroBtn.addEventListener("click", () => {
+            alert("Haha, you can’t click 0%! ❤️ Shahmeer loves you infinitely!");
+        });
+    </script>
+</body>
+</html>
